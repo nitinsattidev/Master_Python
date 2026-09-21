@@ -1,0 +1,19 @@
+print(True == 1)
+print([] == [])
+print(10 == 10.0)
+print("" == 1)
+print([] == 1)
+
+
+# is is looking for exact match, due to which if two list looks similar in elements but since are at different memory location, will give output as False
+
+print(True is True)
+print("1" is "1")
+print([] is [])
+print(10 is 10)
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a is b)
+c = b
+print(c is b)
