@@ -23,3 +23,5 @@ for image in picture:
 # clean
 # Readability
 # predictability
+# Do not Repeat
+# Dry
