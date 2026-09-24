@@ -1,0 +1,6 @@
+Everythig in python is object
+
+4 pillars of OOPs
+1. Encapsulation
+2. Abstraction
+3. Inheritance
