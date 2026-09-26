@@ -1,9 +1,12 @@
-# Users
+# polymorphism means many forms
 
 
 class User:
     def sign_in(self):
         print("logged")
+
+    def attack(self):
+        print("Do Nothing!")
 
 
 class Wizard(User):
@@ -12,6 +15,7 @@ class Wizard(User):
         self.power = power
 
     def attack(self):
+        User.attack(self)
         print(f"Attacking with power of {self.power}")
 
 
@@ -21,20 +25,16 @@ class Archer(User):
         self.num_arrows = num_arrows
 
     def attack(self):
+        User.attack(self)
         print(f"Attacking with arrows: arrows left - {self.num_arrows}")
 
 
-wizard1 = Wizard("Nitin", "Crusher")
+def player_attack(char):
+    char.attack()
 
-wizard1.sign_in()
-print(wizard1.name)
-wizard1.attack()
 
-archer1 = Archer("Yamini", 100)
-archer1.attack()
+wizard1 = Wizard("Nitin", "Fighter")
+archer1 = Archer("Yamini", 200)
 
-print(isinstance(wizard1, Wizard))
-
-print(
-    isinstance(wizard1, object)
-)  # Every class in python is  inherited from base class object and it's subclass
+player_attack(wizard1)
+player_attack(archer1)
